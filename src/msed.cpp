@@ -65,7 +65,7 @@ std::string ID0(char *key, int size) {
     SHA256_Final(hash.key, &sha_ctx);
 
     for(int byte : hash.id0)
-        id0 << std::uppercase << std::hex << +byte;
+        id0 << std::uppercase << std::hex << byte;
 
     return id0.str();
 }
